@@ -1,8 +1,6 @@
 import { createMachine, assign } from "xstate";
 import nouns from "./nouns";
 
-// @todo - Need to show and keep track of what words were guessed in the round
-
 const postFetch = (url, body) =>
   fetch(url, {
     method: "POST",
@@ -175,7 +173,7 @@ export default createMachine(
           guessing: {
             after: {
               120000: { target: "finalGuess" },
-              // 5000: { target: "finalGuess" },
+              // 5000: { target: "finalGuess" }, // Makes it easier while debugging
             },
             on: {
               CORRECT: {
