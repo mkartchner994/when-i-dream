@@ -5,7 +5,7 @@ inspired by the board game [When I Dream](https://boardgamegeek.com/boardgame/19
 
 # Host Setup for Remote Play
 
-Currently, this game is intended to be facilitated by a host who can run the game on their machine and open a tunnel to expose a localhost web server. Below shows how to do this with the [ngrok](https://ngrok.com/docs) service but it can also be done with other similar services.
+Currently, this game is intended to be facilitated by a host who can run the game on their computer, open a tunnel to expose a localhost web server, and share their screen on a video call (zoom or other). Below shows how to do this with the [ngrok](https://ngrok.com/docs) tunnel service but it can also be done with other similar services.
 
 1. `git clone https://github.com/mkartchner994/when-i-dream.git`
 1. `npm i`
