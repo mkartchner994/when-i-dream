@@ -71,14 +71,14 @@ When the two minutes are over, the Dreamer may give one last answer (this is not
 
 Before opening their eyes, the Dreamer recounts their dream and tries to mention all the words they guessed during the night. As you recount the dream, feel free to dramatize your dream. Be inspired by your answers to create a dreamy, funny, zany story. For example: 
 
-> "In my dream, I saw a ROOSTER who fought against a VAMPIRE fora HAMBURGER while a DOG was playing DRUMS"
+> "In my dream, I saw a ROOSTER who fought against a VAMPIRE for a HAMBURGER while a DOG was playing DRUMS"
 
 When the Dreamer has finished recounting their dream, they may open their eyes. If the Dreamer is able to mention all the "Correct" guesses when recounting the dream select the "Correct" button. This will give the Dreamer 2 extra points. Select either the "Correct" or "Wrong" button to move on to see the the current scores for the round. After reviewing the scores, you can select "Next" to chose the next Dreamer and start a new round.
 
 ### Scoring Points
 
 - Fairies score 1 point for each correct guess.
-- Boogeymen core 1 point for each incorrect guess.
+- Boogeymen score 1 point for each incorrect guess.
 - Sandmen compare the number of correct and incorrect guesses.
     - If the numbers are the same, they score a point for each correct guess and 2 extra points.
     - If there is a difference of 1, they score a number of points equal to the greater of these two numbers.
