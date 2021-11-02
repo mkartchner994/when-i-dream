@@ -1,34 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# When I Dream - Remote
 
-## Getting Started
+This is a remote friendly game 
+inspired by the board game [When I Dream](https://boardgamegeek.com/boardgame/198454/when-i-dream).
 
-First, run the development server:
+# Host Setup for Remote Play
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Currently, this game is intended to be facilitated by a host who can run the game on their machine and open a tunnel to expose a localhost web server. Below shows how to do this with the [ngrok](https://ngrok.com/docs) service but it can also be done with other similar services.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. `git clone https://github.com/mkartchner994/when-i-dream.git`
+1. `npm i`
+1. `npx prisma migrate dev`
+1. `npm run build`
+1. `npm run start`
+1. Open http://localhost:3000/ in your browser
+1. Add player names - 4 to 10
+1. `ngrok http 3000` - share the character url with players - https://{something}.ngrok.io/characters
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can then walk through the overview, objective, and game play with the players.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# Game Overview and Objective
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+This game is played over a series of rounds equal to the number of players. Each round is divided into two phases: Night and Day. Each round, one player plays as the Dreamer who must identify "dreams" (words) based on the clues given by the other players. (Fairies, Boogeymen, and Sandmen)
 
-## Learn More
+At the end of the game, the player with the most points wins.
 
-To learn more about Next.js, take a look at the following resources:
+# Game Play
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Once player names have been added and the character url has been shared with players as described in the Host Setup section above, the host can select "Next" and move onto the "Select a Dreamer" step. Each player should have a chance to be the dreamer 1 time throughout the game. To start the game, choose the first player in the players list and select "Next" to move onto the "Dream Spirit" step.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Roles
 
-## Deploy on Vercel
+In the "Dream Spirt" step roles are randomly assinged to all other players besides the chosen Dreamer. The below table shows what possible roles could be assinged given the number of players. Each player should select their own name from the https://{something}.ngrok.io/characters url given to see which role they have been assinged for the round. (Players should only view their own roles - makes it more fun!)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Number of Players | 4   | 5   | 6   | 7   | 8   | 9   | 10  |
+| ----------------- | --- | --- | --- | --- | --- | --- | --- |
+| Fairies           | 1   | 2   | 3   | 3   | 4   | 4   | 5   |
+| Boogeymen         | 1   | 1   | 2   | 2   | 3   | 3   | 4   |
+| Sandmen           | 2   | 2   | 1   | 2   | 1   | 2   | 1   |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Fairies must help the Dreamer indentify the most "dreams" (words).
+- Boogeymen must trick the Dreamer into giving incorrect guesses.
+- Sandmen alternate between helping the Fairies and Boogeymen so that the Dreamer gives an equal number of correct and incorrect guesses.
+
+## Night Phase
+
+Todo
+
+## Day Phase
+
+Todo
+# Built With
+
+- [Next.js](https://nextjs.org/docs/getting-started)
+- [XState](https://xstate.js.org/docs/)
+- [Prisma](https://www.prisma.io/docs/)
+- [Tailwind CSS](https://tailwindcss.com/docs)
